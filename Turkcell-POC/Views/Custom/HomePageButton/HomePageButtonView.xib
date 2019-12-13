@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePageButtonView" customModule="Turkcell_POC" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="b1S-o6-Gn8" id="rUd-cV-i3w"/>
+                <outlet property="imageContainerView" destination="bFP-rr-4Nc" id="pf6-z8-gYj"/>
+                <outlet property="titleLabel" destination="rWf-VS-g17" id="1Xo-iB-5d9"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vU-LL-hJ6">
+                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                    <subviews>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bFP-rr-4Nc">
+                            <rect key="frame" x="15" y="8" width="50" height="50"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar_anasayfa" translatesAutoresizingMaskIntoConstraints="NO" id="b1S-o6-Gn8">
+                                    <rect key="frame" x="12" y="12" width="26" height="26"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="26" id="g7E-nh-XMk"/>
+                                        <constraint firstAttribute="height" constant="26" id="mBZ-bN-8VH"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <accessibility key="accessibilityConfiguration">
+                                <accessibilityTraits key="traits" notEnabled="YES"/>
+                            </accessibility>
+                            <constraints>
+                                <constraint firstItem="b1S-o6-Gn8" firstAttribute="centerX" secondItem="bFP-rr-4Nc" secondAttribute="centerX" id="1lo-rq-Mti"/>
+                                <constraint firstAttribute="width" constant="50" id="2g8-dg-xh2"/>
+                                <constraint firstItem="b1S-o6-Gn8" firstAttribute="centerY" secondItem="bFP-rr-4Nc" secondAttribute="centerY" id="CMj-qn-eJt"/>
+                                <constraint firstAttribute="height" constant="50" id="bAQ-q4-nDb"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ana Sayfa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWf-VS-g17">
+                            <rect key="frame" x="0.0" y="63" width="80" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <accessibility key="accessibilityConfiguration">
+                        <accessibilityTraits key="traits" notEnabled="YES"/>
+                    </accessibility>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="rWf-VS-g17" secondAttribute="bottom" id="3Nt-5h-l0X"/>
+                        <constraint firstItem="rWf-VS-g17" firstAttribute="leading" secondItem="1vU-LL-hJ6" secondAttribute="leading" id="AvU-K0-kpC"/>
+                        <constraint firstItem="bFP-rr-4Nc" firstAttribute="centerX" secondItem="1vU-LL-hJ6" secondAttribute="centerX" id="Rh3-78-E91"/>
+                        <constraint firstAttribute="trailing" secondItem="rWf-VS-g17" secondAttribute="trailing" id="eVK-zL-4jg"/>
+                        <constraint firstItem="bFP-rr-4Nc" firstAttribute="top" secondItem="1vU-LL-hJ6" secondAttribute="top" constant="8" id="qP1-MI-A30"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="1vU-LL-hJ6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Abe-re-UnY"/>
+                <constraint firstItem="1vU-LL-hJ6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="DXm-lK-TmF"/>
+                <constraint firstItem="1vU-LL-hJ6" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="RFe-yT-hhH"/>
+                <constraint firstItem="1vU-LL-hJ6" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="b5K-rO-ahA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.75" y="152.11267605633802"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tabbar_anasayfa" width="26" height="26"/>
+    </resources>
+</document>

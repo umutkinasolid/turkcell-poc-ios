@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePageViewController" customModule="Turkcell_POC" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionViewHeightConstraint" destination="PvN-kR-Xmx" id="Rgr-eC-pMD"/>
+                <outlet property="menuCollectionView" destination="Nr1-21-xl9" id="hKg-ZT-Y3O"/>
+                <outlet property="userInfoView" destination="Hup-72-HPp" id="GHt-vv-veI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vKm-mw-b8d">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" translatesAutoresizingMaskIntoConstraints="NO" id="AxW-Od-Qcz">
+                            <rect key="frame" x="20" y="20" width="280" height="90"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_mycell" translatesAutoresizingMaskIntoConstraints="NO" id="N5k-f1-Qcv">
+                                    <rect key="frame" x="0.0" y="0.0" width="87" height="90"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="90" id="7qY-I8-hqT"/>
+                                        <constraint firstAttribute="width" constant="87" id="jka-aZ-4dY"/>
+                                    </constraints>
+                                </imageView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hup-72-HPp" customClass="UserInfoView" customModule="Turkcell_POC" customModuleProvider="target">
+                                    <rect key="frame" x="87" y="0.0" width="193" height="90"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="193" id="ETa-f7-beG"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="W7a-qj-GOb"/>
+                            </constraints>
+                        </stackView>
+                        <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" contentInsetAdjustmentBehavior="never" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Nr1-21-xl9">
+                            <rect key="frame" x="20" y="150" width="280" height="250"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="999" constant="250" id="PvN-kR-Xmx"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="ShK-2g-W0b">
+                                <size key="itemSize" width="0.0" height="0.0"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Tpk-fk-qSY"/>
+                                <outlet property="delegate" destination="-1" id="VjC-lV-D1C"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" name="Background"/>
+                    <constraints>
+                        <constraint firstItem="AxW-Od-Qcz" firstAttribute="top" secondItem="vKm-mw-b8d" secondAttribute="top" constant="20" id="4gQ-ZN-MO0"/>
+                        <constraint firstAttribute="trailing" secondItem="Nr1-21-xl9" secondAttribute="trailing" constant="20" id="I7s-mV-RFS"/>
+                        <constraint firstItem="Nr1-21-xl9" firstAttribute="top" secondItem="AxW-Od-Qcz" secondAttribute="bottom" constant="40" id="IyI-lE-8cO"/>
+                        <constraint firstItem="AxW-Od-Qcz" firstAttribute="leading" secondItem="vKm-mw-b8d" secondAttribute="leading" constant="20" id="qAZ-8r-w7P"/>
+                        <constraint firstItem="Nr1-21-xl9" firstAttribute="leading" secondItem="vKm-mw-b8d" secondAttribute="leading" constant="20" id="tQ2-9Z-llv"/>
+                        <constraint firstAttribute="trailing" secondItem="AxW-Od-Qcz" secondAttribute="trailing" constant="20" id="yOB-rL-yeO"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Nr1-21-xl9" secondAttribute="bottom" constant="168" id="ySS-ot-rIh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="Background"/>
+            <constraints>
+                <constraint firstItem="vKm-mw-b8d" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="2Y8-wN-Mtp"/>
+                <constraint firstItem="vKm-mw-b8d" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="GHQ-I7-4aH"/>
+                <constraint firstItem="vKm-mw-b8d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JZw-r0-sJQ"/>
+                <constraint firstItem="vKm-mw-b8d" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bNu-Lk-QNi"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.75" y="152.11267605633802"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_mycell" width="426" height="194"/>
+        <namedColor name="Background">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
